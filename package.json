@@ -2,10 +2,6 @@
   "name": "@obscuraworks/libsignal-node",
   "version": "1.0.0",
   "description": "Node.js implementation of the Signal Protocol cryptographic primitives used by ObscuraWorks services.",
-  "publishConfig": {
-  "registry": "https://npm.pkg.github.com",
-  "access": "public"
-  }
   "keywords": [
     "signal",
     "libsignal",
@@ -16,7 +12,7 @@
     "obscuraworks"
   ],
   "author": {
-    "name": "Obscuraworks",
+    "name": "ObscuraWorks",
     "url": "https://github.com/obscuraworks"
   },
   "license": "MIT",
@@ -29,6 +25,7 @@
   },
   "homepage": "https://github.com/obscuraworks/libsignal-node#readme",
   "main": "index.js",
+  "type": "commonjs",
   "exports": {
     ".": {
       "require": "./index.js",
@@ -43,7 +40,7 @@
     "node": ">=20.0.0"
   },
   "publishConfig": {
-    "access": "public"
+    "registry": "https://npm.pkg.github.com"
   },
   "dependencies": {
     "curve25519-js": "^0.0.4",
