@@ -1,6 +1,6 @@
 {
   "name": "@obscuraworks/libsignal-node",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Node.js implementation of the Signal Protocol cryptographic primitives used by ObscuraWorks services.",
   "keywords": [
     "signal",
@@ -24,28 +24,39 @@
     "url": "https://github.com/obscuraworks/libsignal-node/issues"
   },
   "homepage": "https://github.com/obscuraworks/libsignal-node#readme",
-  "main": "index.js",
   "type": "commonjs",
+  "main": "./index.js",
+
   "exports": {
-    ".": {
-      "require": "./index.js",
-      "default": "./index.js"
-    }
+    ".": "./index.js",
+    "./crypto": "./src/crypto.js",
+    "./curve": "./src/curve.js",
+    "./keyhelper": "./src/keyhelper.js",
+    "./protocol_address": "./src/protocol_address.js",
+    "./session_builder": "./src/session_builder.js",
+    "./session_cipher": "./src/session_cipher.js",
+    "./session_record": "./src/session_record.js",
+    "./errors": "./src/errors.js"
   },
+
   "files": [
     "index.js",
-    "src/"
+    "src"
   ],
+
   "engines": {
     "node": ">=20.0.0"
   },
+
   "publishConfig": {
-  "registry": "https://registry.npmjs.org/"
+    "registry": "https://registry.npmjs.org/"
   },
+
   "dependencies": {
     "curve25519-js": "^0.0.4",
     "protobufjs": "6.8.8"
   },
+
   "devDependencies": {
     "eslint": "6.0.1"
   }
